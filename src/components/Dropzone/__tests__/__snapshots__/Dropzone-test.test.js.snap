@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropzone basic 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 fWrrBh sc-bdVaJa euPitw"
+    tabindex="0"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 loiNKJ"
+    >
+      <input
+        accept=""
+        autocomplete="off"
+        style="display: none;"
+        tabindex="-1"
+        type="file"
+      />
+      <span
+        class="StyledText-sc-1sadyjn-0 fWSbXS"
+      >
+        Drag and drop or 
+        <a
+          class="StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+        >
+          choose
+        </a>
+         
+        a file
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dropzone renders basic dropzone 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 fWrrBh sc-bdVaJa euPitw"
+    tabindex="0"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 loiNKJ"
+    >
+      <input
+        accept=""
+        autocomplete="off"
+        style="display: none;"
+        tabindex="-1"
+        type="file"
+      />
+      <span
+        class="StyledText-sc-1sadyjn-0 fWSbXS"
+      >
+        Drag and drop or 
+        <a
+          class="StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+        >
+          choose
+        </a>
+         
+        a file
+      </span>
+    </div>
+  </div>
+</div>
+`;
