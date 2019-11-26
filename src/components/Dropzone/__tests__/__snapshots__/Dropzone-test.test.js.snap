@@ -1,33 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dropzone basic 1`] = `
+exports[`Dropzone accept single file by default 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 fWrrBh sc-bdVaJa euPitw"
+    class="StyledBox-sc-13pk1d4-0 bbmEna sc-bdVaJa euPitw"
     tabindex="0"
   >
+    <input
+      accept=""
+      autocomplete="off"
+      style="display: none;"
+      tabindex="-1"
+      type="file"
+    />
     <div
-      class="StyledBox-sc-13pk1d4-0 loiNKJ"
+      class="StyledBox-sc-13pk1d4-0 hFIMGw"
     >
-      <input
-        accept=""
-        autocomplete="off"
-        style="display: none;"
-        tabindex="-1"
-        type="file"
-      />
-      <span
-        class="StyledText-sc-1sadyjn-0 fWSbXS"
+      <div
+        class="StyledBox-sc-13pk1d4-0 ekjAwv"
       >
-        Drag and drop or 
-        <a
-          class="StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+        <span
+          class="StyledText-sc-1sadyjn-0 sahjY"
         >
-          choose
-        </a>
-         
-        a file
-      </span>
+          gremlin.png
+        </span>
+      </div>
+      <button
+        aria-label="remove gremlin.png"
+        class="StyledButton-sc-323bzc-0 gOcOoZ"
+        type="button"
+      >
+        <svg
+          aria-label="FormClose"
+          class="StyledIcon-ofa7kd-0 iOkQrb"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7,7 L17,17 M7,17 L17,7"
+            fill="none"
+            stroke="#000"
+            stroke-width="2"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
@@ -36,31 +51,196 @@ exports[`Dropzone basic 1`] = `
 exports[`Dropzone renders basic dropzone 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 fWrrBh sc-bdVaJa euPitw"
+    class="StyledBox-sc-13pk1d4-0 loiNKJ sc-bdVaJa euPitw"
     tabindex="0"
   >
-    <div
-      class="StyledBox-sc-13pk1d4-0 loiNKJ"
+    <input
+      accept=""
+      autocomplete="off"
+      style="display: none;"
+      tabindex="-1"
+      type="file"
+    />
+    <span
+      class="StyledText-sc-1sadyjn-0 fWSbXS"
     >
-      <input
-        accept=""
-        autocomplete="off"
-        style="display: none;"
-        tabindex="-1"
-        type="file"
-      />
-      <span
-        class="StyledText-sc-1sadyjn-0 fWSbXS"
+      Drag and drop or 
+      <a
+        class="StyledAnchor-sc-1rp7lwl-0 jgeOSx"
       >
-        Drag and drop or 
-        <a
-          class="StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+        choose
+      </a>
+       
+      a file
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Dropzone renders correct starting text for multiple files 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 loiNKJ sc-bdVaJa euPitw"
+    tabindex="0"
+  >
+    <input
+      accept=""
+      autocomplete="off"
+      multiple=""
+      style="display: none;"
+      tabindex="-1"
+      type="file"
+    />
+    <span
+      class="StyledText-sc-1sadyjn-0 fWSbXS"
+    >
+      Drag and drop or 
+      <a
+        class="StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+      >
+        choose
+      </a>
+       
+      files
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Dropzone renders correct starting text for single file 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 loiNKJ sc-bdVaJa euPitw"
+    tabindex="0"
+  >
+    <input
+      accept=""
+      autocomplete="off"
+      style="display: none;"
+      tabindex="-1"
+      type="file"
+    />
+    <span
+      class="StyledText-sc-1sadyjn-0 fWSbXS"
+    >
+      Drag and drop or 
+      <a
+        class="StyledAnchor-sc-1rp7lwl-0 jgeOSx"
+      >
+        choose
+      </a>
+       
+      a file
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Dropzone renders file preview 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 bbmEna sc-bdVaJa euPitw"
+    tabindex="0"
+  >
+    <input
+      accept=""
+      autocomplete="off"
+      style="display: none;"
+      tabindex="-1"
+      type="file"
+    />
+    <div
+      class="StyledBox-sc-13pk1d4-0 hFIMGw"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 ekjAwv"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 hcwkPp"
         >
-          choose
-        </a>
-         
-        a file
-      </span>
+          <img
+            class="StyledImage-ey4zx9-0 fIJtXv"
+          />
+        </div>
+        <span
+          class="StyledText-sc-1sadyjn-0 sahjY"
+        >
+          gremlin.png
+        </span>
+      </div>
+      <button
+        aria-label="remove gremlin.png"
+        class="StyledButton-sc-323bzc-0 gOcOoZ"
+        type="button"
+      >
+        <svg
+          aria-label="FormClose"
+          class="StyledIcon-ofa7kd-0 iOkQrb"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7,7 L17,17 M7,17 L17,7"
+            fill="none"
+            stroke="#000"
+            stroke-width="2"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dropzone renders file size 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 bbmEna sc-bdVaJa euPitw"
+    tabindex="0"
+  >
+    <input
+      accept=""
+      autocomplete="off"
+      style="display: none;"
+      tabindex="-1"
+      type="file"
+    />
+    <div
+      class="StyledBox-sc-13pk1d4-0 hFIMGw"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 ekjAwv"
+      >
+        <span
+          class="StyledText-sc-1sadyjn-0 sahjY"
+        >
+          gremlin.png
+        </span>
+        <span
+          class="StyledText-sc-1sadyjn-0 fUmIvE"
+        >
+          0.0
+           
+          bytes
+        </span>
+      </div>
+      <button
+        aria-label="remove gremlin.png"
+        class="StyledButton-sc-323bzc-0 gOcOoZ"
+        type="button"
+      >
+        <svg
+          aria-label="FormClose"
+          class="StyledIcon-ofa7kd-0 iOkQrb"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7,7 L17,17 M7,17 L17,7"
+            fill="none"
+            stroke="#000"
+            stroke-width="2"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
