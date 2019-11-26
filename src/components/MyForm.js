@@ -8,6 +8,10 @@ export const MyForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
+  // The addFiles and deleteFiles functions ensure that the files that will be
+  // submitted by the form stay aligned with the files present in the dropzone.
+  // Be sure to include these functions with the onAddFiles and onDeleteFiles
+  // props of the Dropzone if you intend to use file uploading.
   const addFiles = newFiles => {
     setFiles(...files, newFiles);
   };
@@ -18,6 +22,8 @@ export const MyForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
+    // You will need to update ../utils/fileUpload with the correct url for
+    // where the data will be sent to.
     fileUpload({ firstName, lastName, files });
   };
 
@@ -63,6 +69,9 @@ export const MyForm = () => {
           }}
         >
           <FormField label="Select files" name="file-upload">
+            {/* In order to utilize fileUpload, you need to provide
+             * the onAddFiles and onDeleteFiles props and their associated functions
+             */}
             <Dropzone
               multiple
               showPreview
