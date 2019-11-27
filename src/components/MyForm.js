@@ -36,8 +36,6 @@ export const MyForm = () => {
         <Heading>Dropzone Form</Heading>
         <FormField
           label="First Name"
-          htmlFor="fname"
-          name="fname"
           required
           validate={{ regexp: /^[a-z]/i }}
           onChange={event => setFirstName(event.value)}
@@ -45,7 +43,6 @@ export const MyForm = () => {
         />
         <FormField
           label="Last Name"
-          name="lname"
           required
           validate={{ regexp: /^[a-z]/i }}
           onChange={event => setLastName(event.target.value)}
@@ -68,7 +65,7 @@ export const MyForm = () => {
             }
           }}
         >
-          <FormField label="Select files" name="file-upload">
+          <FormField label="Select files">
             {/* In order to utilize fileUpload, you need to provide
              * the onAddFiles and onDeleteFiles props and their associated functions
              */}
