@@ -48,10 +48,10 @@ exports[`Dropzone accept single file by default 1`] = `
 </div>
 `;
 
-exports[`Dropzone calculates correct suffix for file size 1`] = `
+exports[`Dropzone removes file when remove button is clicked 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 bbmEna sc-bdVaJa euPitw"
+    class="StyledBox-sc-13pk1d4-0 loiNKJ sc-bdVaJa euPitw"
     tabindex="0"
   >
     <input
@@ -61,44 +61,18 @@ exports[`Dropzone calculates correct suffix for file size 1`] = `
       tabindex="-1"
       type="file"
     />
-    <div
-      class="StyledBox-sc-13pk1d4-0 hFIMGw"
+    <span
+      class="StyledText-sc-1sadyjn-0 fWSbXS"
     >
-      <div
-        class="StyledBox-sc-13pk1d4-0 ekjAwv"
+      Drag and drop or 
+      <a
+        class="StyledAnchor-sc-1rp7lwl-0 jgeOSx"
       >
-        <span
-          class="StyledText-sc-1sadyjn-0 sahjY"
-        >
-          gremlin.png
-        </span>
-        <span
-          class="StyledText-sc-1sadyjn-0 fUmIvE"
-        >
-          10.0
-           
-          KB
-        </span>
-      </div>
-      <button
-        aria-label="remove gremlin.png"
-        class="StyledButton-sc-323bzc-0 gOcOoZ"
-        type="button"
-      >
-        <svg
-          aria-label="FormClose"
-          class="StyledIcon-ofa7kd-0 iOkQrb"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M7,7 L17,17 M7,17 L17,7"
-            fill="none"
-            stroke="#000"
-            stroke-width="2"
-          />
-        </svg>
-      </button>
-    </div>
+        choose
+      </a>
+       
+      a file
+    </span>
   </div>
 </div>
 `;
@@ -246,7 +220,7 @@ exports[`Dropzone renders file preview 1`] = `
 </div>
 `;
 
-exports[`Dropzone renders file size 1`] = `
+exports[`Dropzone renders file size and calculates correct suffix 1`] = `
 <div>
   <div
     class="StyledBox-sc-13pk1d4-0 bbmEna sc-bdVaJa euPitw"
@@ -273,9 +247,9 @@ exports[`Dropzone renders file size 1`] = `
         <span
           class="StyledText-sc-1sadyjn-0 fUmIvE"
         >
-          100.0
+          10.0
            
-          bytes
+          KB
         </span>
       </div>
       <button

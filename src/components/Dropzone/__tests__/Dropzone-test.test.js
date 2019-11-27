@@ -46,52 +46,27 @@ describe("Dropzone", () => {
       exact: false
     }).previousSibling;
 
-    Object.defineProperty(dropzoneInput, "files", {
-      value: [smallImage]
-    });
+    setUpFileDrop(dropzoneInput, smallImage);
 
     fireEvent.drop(dropzoneInput);
-    const acceptedFile = await waitForElement(() => getByText("gremlin.png"));
+    const acceptedFile = await waitForElement(() => getByText(smallImage.name));
 
     expect(acceptedFile).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
 
-  test("renders file size", async () => {
+  test("renders file size and calculates correct suffix", async () => {
     const { container, getByText } = render(<Dropzone showSize />);
 
     const dropzoneInput = getByText("Drag and drop", {
       exact: false
     }).previousSibling;
 
-    Object.defineProperty(dropzoneInput, "files", {
-      value: [smallImage]
-    });
+    setUpFileDrop(dropzoneInput, largeImage);
 
     fireEvent.drop(dropzoneInput);
 
-    const acceptedFile = await waitForElement(() => getByText("gremlin.png"));
-    expect(acceptedFile).toBeInTheDocument();
-
-    expect(getByText(`100.0 bytes`)).toBeInTheDocument();
-
-    expect(container).toMatchSnapshot();
-  });
-
-  test("calculates correct suffix for file size", async () => {
-    const { container, getByText } = render(<Dropzone showSize />);
-
-    const dropzoneInput = getByText("Drag and drop", {
-      exact: false
-    }).previousSibling;
-
-    Object.defineProperty(dropzoneInput, "files", {
-      value: [largeImage]
-    });
-
-    fireEvent.drop(dropzoneInput);
-
-    const acceptedFile = await waitForElement(() => getByText("gremlin.png"));
+    const acceptedFile = await waitForElement(() => getByText(smallImage.name));
     expect(acceptedFile).toBeInTheDocument();
 
     const fileSize = calculateSize(largeImage.size);
@@ -108,12 +83,10 @@ describe("Dropzone", () => {
     const dropzoneInput = getByText("Drag and drop", {
       exact: false
     }).previousSibling;
-    Object.defineProperty(dropzoneInput, "files", {
-      value: [smallImage]
-    });
+    setUpFileDrop(dropzoneInput, smallImage);
 
     fireEvent.drop(dropzoneInput);
-    const acceptedFile = await waitForElement(() => getByText("gremlin.png"));
+    const acceptedFile = await waitForElement(() => getByText(smallImage.name));
 
     expect(acceptedFile).toBeInTheDocument();
     expect(container.querySelector("img")).toBeInTheDocument();
@@ -127,20 +100,42 @@ describe("Dropzone", () => {
       exact: false
     }).previousSibling;
 
-    Object.defineProperty(dropzoneInput, "files", {
-      value: [smallImage]
-    });
+    setUpFileDrop(dropzoneInput, smallImage);
 
     fireEvent.drop(dropzoneInput);
-    const acceptedFile = await waitForElement(() => getByText("gremlin.png"));
+    const acceptedFile = await waitForElement(() => getByText(smallImage.name));
 
     expect(acceptedFile).toBeInTheDocument();
     expect(getByLabelText("FormClose")).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
+
+  test("removes file when remove button is clicked", async () => {
+    const { container, getByLabelText, getByText } = render(<Dropzone />);
+
+    const dropzoneInput = getByText("Drag and drop", {
+      exact: false
+    }).previousSibling;
+
+    setUpFileDrop(dropzoneInput, smallImage);
+
+    fireEvent.drop(dropzoneInput);
+    const acceptedFile = await waitForElement(() => getByText(smallImage.name));
+    expect(acceptedFile).toBeInTheDocument();
+
+    fireEvent.click(getByLabelText(`remove ${smallImage.name}`));
+    expect(getByText("a file", { exact: false })).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
 });
 
-// This function borrowed from react-dropzone tests
+function setUpFileDrop(dropzoneInput, file) {
+  Object.defineProperty(dropzoneInput, "files", {
+    value: [file]
+  });
+}
+
+// This function is borrowed from react-dropzone tests
 function createFile(name, size, type) {
   const file = new File([], name, { type });
   Object.defineProperty(file, "size", {
