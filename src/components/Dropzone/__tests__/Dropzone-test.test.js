@@ -7,7 +7,7 @@ import {
 } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import { Dropzone } from "../";
-import { calculateSize } from "../../../utils";
+import { calculateSize, truncateText } from "../../../utils";
 
 describe("Dropzone", () => {
   let smallImage;
@@ -107,6 +107,29 @@ describe("Dropzone", () => {
 
     expect(acceptedFile).toBeInTheDocument();
     expect(getByLabelText("FormClose")).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+
+  test("truncates text for long file name", async () => {
+    const { container, getByText } = render(<Dropzone />);
+
+    const dropzoneInput = getByText("Drag and drop", {
+      exact: false
+    }).previousSibling;
+
+    const longTitleFile = createFile(
+      "very-long-image-title-that-should-be-truncated.png",
+      100,
+      "image/png"
+    );
+
+    const truncatedTitle = truncateText(longTitleFile.name);
+    setUpFileDrop(dropzoneInput, longTitleFile);
+
+    fireEvent.drop(dropzoneInput);
+    const acceptedFile = await waitForElement(() => getByText(truncatedTitle));
+
+    expect(acceptedFile).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
 

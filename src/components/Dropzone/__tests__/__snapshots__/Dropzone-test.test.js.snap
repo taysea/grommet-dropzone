@@ -322,3 +322,51 @@ exports[`Dropzone renders remove button 1`] = `
   </div>
 </div>
 `;
+
+exports[`Dropzone truncates text for long file name 1`] = `
+<div>
+  <div
+    class="StyledBox-sc-13pk1d4-0 bbmEna sc-bdVaJa euPitw"
+    tabindex="0"
+  >
+    <input
+      accept=""
+      autocomplete="off"
+      style="display: none;"
+      tabindex="-1"
+      type="file"
+    />
+    <div
+      class="StyledBox-sc-13pk1d4-0 hFIMGw"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 ekjAwv"
+      >
+        <span
+          class="StyledText-sc-1sadyjn-0 sahjY"
+        >
+          very-long-image...
+        </span>
+      </div>
+      <button
+        aria-label="remove very-long-image-title-that-should-be-truncated.png"
+        class="StyledButton-sc-323bzc-0 gOcOoZ"
+        type="button"
+      >
+        <svg
+          aria-label="FormClose"
+          class="StyledIcon-ofa7kd-0 iOkQrb"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7,7 L17,17 M7,17 L17,7"
+            fill="none"
+            stroke="#000"
+            stroke-width="2"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;

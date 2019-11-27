@@ -10,7 +10,6 @@ export const Dropzone = ({
   multiple,
   onAddFiles,
   onDeleteFiles,
-  preview,
   showPreview,
   showSize
 }) => {
@@ -31,7 +30,7 @@ export const Dropzone = ({
   const onDrop = useCallback(
     acceptedFiles => {
       if (!disabled) {
-        if (preview) {
+        if (showPreview) {
           // Accepted files is read-only.
           acceptedFiles.map(file =>
             Object.assign(file, {
@@ -49,7 +48,7 @@ export const Dropzone = ({
         }
       }
     },
-    [disabled, preview, myFiles, onAddFiles, multiple]
+    [disabled, showPreview, myFiles, onAddFiles, multiple]
   );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
