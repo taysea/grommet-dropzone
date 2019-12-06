@@ -4,18 +4,16 @@ import { Box, Image, Text } from "grommet";
 import { calculateFileSize, truncateText } from "../../../utils";
 
 export const FileInfo = ({ file, showPreview, showFileSize }) => (
-  <Box direction="row">
+  <Box direction="row" gap="xsmall" align="center">
     {showPreview && (
       <Box width="xxsmall" height="xxsmall">
         <Image src={file.preview} fit="cover" />
       </Box>
     )}
 
-    <Text margin="xsmall" weight="bold">
-      {truncateText(file.name)}
-    </Text>
+    <Text weight="bold">{truncateText(file.name)}</Text>
     {showFileSize && (
-      <Text margin="xsmall">
+      <Text>
         {calculateFileSize(file.size).value.toFixed(1)}{" "}
         {calculateFileSize(file.size).suffix}
       </Text>
