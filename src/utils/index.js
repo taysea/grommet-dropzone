@@ -1,3 +1,3 @@
-export * from "./calculateSize";
+export * from "./calculateFileSize";
 export * from "./fileUpload";
 export * from "./truncateText";
