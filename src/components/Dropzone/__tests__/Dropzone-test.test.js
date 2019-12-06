@@ -7,7 +7,7 @@ import {
 } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import { Dropzone } from "../";
-import { calculateSize, truncateText } from "../../../utils";
+import { calculateFileSize, truncateText } from "../../../utils";
 
 describe("Dropzone", () => {
   let smallImage;
@@ -69,7 +69,7 @@ describe("Dropzone", () => {
     const acceptedFile = await waitForElement(() => getByText(smallImage.name));
     expect(acceptedFile).toBeInTheDocument();
 
-    const fileSize = calculateSize(largeImage.size);
+    const fileSize = calculateFileSize(largeImage.size);
     expect(
       getByText(`${fileSize.value}.0 ${fileSize.suffix}`)
     ).toBeInTheDocument();

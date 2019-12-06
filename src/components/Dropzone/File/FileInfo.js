@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Box, Image, Text } from "grommet";
-import { calculateSize, truncateText } from "../../../utils";
+import { calculateFileSize, truncateText } from "../../../utils";
 
 export const FileInfo = ({ file, showPreview, showFileSize }) => (
   <Box direction="row">
@@ -16,8 +16,8 @@ export const FileInfo = ({ file, showPreview, showFileSize }) => (
     </Text>
     {showFileSize && (
       <Text margin="xsmall">
-        {calculateSize(file.size).value.toFixed(1)}{" "}
-        {calculateSize(file.size).suffix}
+        {calculateFileSize(file.size).value.toFixed(1)}{" "}
+        {calculateFileSize(file.size).suffix}
       </Text>
     )}
   </Box>
