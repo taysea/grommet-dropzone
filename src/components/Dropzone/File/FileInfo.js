@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Box, Image, Text } from "grommet";
 import { calculateSize, truncateText } from "../../../utils";
 
-export const FileInfo = ({ file, showPreview, showSize }) => (
+export const FileInfo = ({ file, showPreview, showFileSize }) => (
   <Box direction="row">
     {showPreview && (
       <Box width="xxsmall" height="xxsmall">
@@ -14,7 +14,7 @@ export const FileInfo = ({ file, showPreview, showSize }) => (
     <Text margin="xsmall" weight="bold">
       {truncateText(file.name)}
     </Text>
-    {showSize && (
+    {showFileSize && (
       <Text margin="xsmall">
         {calculateSize(file.size).value.toFixed(1)}{" "}
         {calculateSize(file.size).suffix}
@@ -29,7 +29,7 @@ FileInfo.propTypes = {
     size: PropTypes.number.isRequired,
     preview: PropTypes.string
   }).isRequired,
-  showSize: PropTypes.bool.isRequired,
+  showFileSize: PropTypes.bool.isRequired,
   showPreview: PropTypes.bool.isRequired
 };
 

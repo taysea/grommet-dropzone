@@ -56,7 +56,7 @@ describe("Dropzone", () => {
   });
 
   test("renders file size and calculates correct suffix", async () => {
-    const { container, getByText } = render(<Dropzone showSize />);
+    const { container, getByText } = render(<Dropzone showFileSize />);
 
     const dropzoneInput = getByText("Drag and drop", {
       exact: false

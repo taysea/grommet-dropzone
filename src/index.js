@@ -13,7 +13,7 @@ import * as serviceWorker from "./serviceWorker";
  * - Remove "multiple" prop from the Dropzone component in MyForm.js
  *
  * To hide file size:
- * - Remove "showSize" prop from the Dropzone component in MyForm.js
+ * - Remove "showFileSize" prop from the Dropzone component in MyForm.js
  *
  * To hide preview:
  * - Remove "preview" prop from the Dropzone component in MyForm.js

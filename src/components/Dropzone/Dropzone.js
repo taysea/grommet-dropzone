@@ -11,7 +11,7 @@ export const Dropzone = ({
   onAddFiles,
   onDeleteFiles,
   showPreview,
-  showSize
+  showFileSize
 }) => {
   const [myFiles, setMyFiles] = useState([]);
   const [disabled, setDisabled] = useState(false);
@@ -77,7 +77,7 @@ export const Dropzone = ({
               key={index}
               removeFile={removeFile}
               showPreview={showPreview}
-              showSize={showSize}
+              showFileSize={showFileSize}
               margin={{
                 bottom: index !== myFiles.length - 1 ? "xsmall" : "none"
               }}
@@ -105,7 +105,7 @@ Dropzone.propTypes = {
   onAddFiles: PropTypes.func,
   onDeleteFiles: PropTypes.func,
   showPreview: PropTypes.bool,
-  showSize: PropTypes.bool
+  showFileSize: PropTypes.bool
 };
 
 Dropzone.defaultProps = {
@@ -114,5 +114,5 @@ Dropzone.defaultProps = {
   onAddFiles: undefined,
   onDeleteFiles: undefined,
   showPreview: false,
-  showSize: false
+  showFileSize: false
 };

@@ -4,10 +4,20 @@ import { Box, Button } from "grommet";
 import { FormClose } from "grommet-icons";
 import { FileInfo } from "./FileInfo";
 
-export const File = ({ file, removeFile, showPreview, showSize, ...rest }) => {
+export const File = ({
+  file,
+  removeFile,
+  showPreview,
+  showFileSize,
+  ...rest
+}) => {
   return (
     <Box direction="row" align="center" justify="between" {...rest}>
-      <FileInfo file={file} showSize={showSize} showPreview={showPreview} />
+      <FileInfo
+        file={file}
+        showFileSize={showFileSize}
+        showPreview={showPreview}
+      />
       <RemoveButton file={file} removeFile={removeFile} />
     </Box>
   );
@@ -27,11 +37,11 @@ File.propTypes = {
     path: PropTypes.string.isRequired
   }).isRequired,
   showPreview: PropTypes.bool,
-  showSize: PropTypes.bool,
+  showFileSize: PropTypes.bool,
   removeFile: PropTypes.func.isRequired
 };
 
 File.defaultProps = {
   showPreview: false,
-  showSize: false
+  showFileSize: false
 };

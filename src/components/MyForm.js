@@ -72,7 +72,7 @@ export const MyForm = () => {
             <Dropzone
               multiple
               showPreview
-              showSize
+              showFileSize
               onAddFiles={addFiles}
               onDeleteFiles={deleteFiles}
             />
