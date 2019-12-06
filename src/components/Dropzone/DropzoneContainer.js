@@ -27,6 +27,7 @@ export const DropzoneContainer = forwardRef(
       }}
       align={files.length ? "stretch" : "center"}
       justify="center"
+      pad="xsmall"
       ref={ref}
       {...rest}
     >

@@ -6,7 +6,7 @@ import { calculateSize, truncateText } from "../../../utils";
 export const FileInfo = ({ file, showPreview, showSize }) => (
   <Box direction="row">
     {showPreview && (
-      <Box width="45px" height="45px">
+      <Box width="xxsmall" height="xxsmall">
         <Image src={file.preview} fit="cover" />
       </Box>
     )}

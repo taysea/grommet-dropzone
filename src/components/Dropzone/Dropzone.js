@@ -1,4 +1,4 @@
-import React, { createRef, useCallback, useState, useEffect } from "react";
+import React, { createRef, useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import { useDropzone } from "react-dropzone";
 import { Anchor, Text } from "grommet";
@@ -73,10 +73,14 @@ export const Dropzone = ({
         ? myFiles.map((file, index) => (
             <File
               file={file}
+              index={index}
               key={index}
               removeFile={removeFile}
               showPreview={showPreview}
               showSize={showSize}
+              margin={{
+                bottom: index !== myFiles.length - 1 ? "xsmall" : "none"
+              }}
             />
           ))
         : undefined}
