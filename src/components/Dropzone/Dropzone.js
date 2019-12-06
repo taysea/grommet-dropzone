@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { useDropzone } from "react-dropzone";
 import { Anchor, Text } from "grommet";
 import { DropzoneContainer } from "./DropzoneContainer";
+import { DefaultMessage, DropMessage } from "./DropzoneMessages";
 import { File } from "./File";
 
 export const Dropzone = ({
@@ -61,6 +62,20 @@ export const Dropzone = ({
     }
   };
 
+  const currentFiles = myFiles.map((file, index) => (
+    <File
+      file={file}
+      index={index}
+      key={index}
+      removeFile={removeFile}
+      showPreview={showPreview}
+      showFileSize={showFileSize}
+      margin={{
+        bottom: index !== myFiles.length - 1 ? "xsmall" : "none"
+      }}
+    />
+  ));
+
   return (
     <DropzoneContainer
       isDragActive={isDragActive}
@@ -69,31 +84,12 @@ export const Dropzone = ({
       {...getRootProps()}
     >
       <input {...getInputProps()} />
-      {myFiles.length
-        ? myFiles.map((file, index) => (
-            <File
-              file={file}
-              index={index}
-              key={index}
-              removeFile={removeFile}
-              showPreview={showPreview}
-              showFileSize={showFileSize}
-              margin={{
-                bottom: index !== myFiles.length - 1 ? "xsmall" : "none"
-              }}
-            />
-          ))
-        : undefined}
+      {myFiles.length ? currentFiles : undefined}
       {!myFiles.length &&
-        (isDragActive ? (
-          <Text color="brand" weight="bold">
-            Drop {multiple ? "files" : "file"} here
-          </Text>
+        (!isDragActive ? (
+          <DefaultMessage multiple={multiple} />
         ) : (
-          <Text>
-            Drag and drop or <Anchor>choose</Anchor>{" "}
-            {multiple ? "files" : "a file"}
-          </Text>
+          <DropMessage multiple={multiple} />
         ))}
     </DropzoneContainer>
   );
