@@ -17,16 +17,6 @@ export const Dropzone = ({
   const [disabled, setDisabled] = useState(false);
   const containerRef = createRef();
 
-  useEffect(
-    () => () => {
-      // If we do this sometimes the path to file preview gets
-      // lost for remaining files
-      // Make sure to revoke the data uris to avoid memory leaks
-      // myFiles.forEach(file => URL.revokeObjectURL(file.preview));
-    },
-    [myFiles]
-  );
-
   const onDrop = useCallback(
     acceptedFiles => {
       if (!disabled) {
