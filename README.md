@@ -7,7 +7,7 @@ The following props can be applied to Dropzone to affect its functionality:
 
 | name | type | default | description |
 |---|---|---|---|
-| accept | string | undefined | The type of file the dropzone can accept. (e.g.: "image/png")  |
+| accept | string | undefined | The type of file the dropzone can accept. (e.g. "image/png", "file/pdf", "image/*")  |
 | multiple | boolean | false | Determines if the dropzone should accept a single file or multiple files.  |
 | showFileSize | boolean | false | Determines if the size of the file should be displayed. |
 | showPreview | boolean | false |  Determines if a thumbnail preview of the image should be displayed. |
