@@ -1,7 +1,6 @@
 import React, { createRef, useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import { useDropzone } from "react-dropzone";
-import { Anchor, Text } from "grommet";
 import { DropzoneContainer } from "./DropzoneContainer";
 import { DefaultMessage, DropMessage } from "./DropzoneMessages";
 import { File } from "./File";
@@ -83,6 +82,9 @@ export const Dropzone = ({
       ref={containerRef}
       {...getRootProps()}
     >
+      {/* This input is required by react-dropzone and expands to fill its bouding
+       *  container. The UI is created by the elements below the input.
+       */}
       <input {...getInputProps()} />
       {myFiles.length ? currentFiles : undefined}
       {!myFiles.length &&
