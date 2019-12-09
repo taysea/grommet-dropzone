@@ -2,6 +2,7 @@
 
 This app uses Grommet and react-dropzone to create a drag and drop file uploader. To use this example in your project, you can add the Dropzone folder and MyForm.js files directly to your project. 
 
+### Dropzone API
 The following props can be applied to Dropzone to affect its functionality:
 
 | name | type | default | description |
@@ -11,6 +12,7 @@ The following props can be applied to Dropzone to affect its functionality:
 | showFileSize | boolean | false | Determines if the size of the file should be displayed. |
 | showPreview | boolean | false |  Determines if a thumbnail preview of the image should be displayed. |
 
+### How to connect Dropzone with a form
 The Dropzone has been placed within a form to demonstrate how file upload could be completed. Be sure to note the functions that have been created in `MyForm.js` to allow the file data to be tracked in the form state and submitted. If you intend to use the Dropzone for file upload, you will need to include these functions within your form. Additionally, a `fileUpload.js` file has been provided as a starter for how to connect the form data with your database. 
 ```
 const [files, setFiles] = useState([]);
