@@ -12,7 +12,7 @@ The following props can be applied to Dropzone to affect its functionality:
 | showFileSize | boolean | false | Determines if the size of the file should be displayed. |
 | showPreview | boolean | false |  Determines if a thumbnail preview of the image should be displayed. |
 
-### How to connect Dropzone with a form
+### How to use Dropzone in a form
 This app puts the Dropzone within a form to demonstrate how to do file uploading. If you intend to use the Dropzone for file upload, you will need to include these functions within your form (see `MyForm.js` for how it is implemented). Additionally, a `fileUpload.js` file has been provided as a starter for how to connect the form data with your database. 
 ```
 const [files, setFiles] = useState([]);
