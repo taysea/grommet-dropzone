@@ -1,4 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Purpose
+
+This app uses Grommet and react-dropzone to create a drag and drop file uploader. The following props can be applied to Dropzone to affect its functionality:
+
+| name | type | default | description |
+|---|---|---|---|
+| accept | string | undefined | The type of file the dropzone can accept. (e.g.: "image/png")  |
+| multiple | boolean | false | Determines if the dropzone should accept a single file or multiple files.  |
+| showFileSize | boolean | false | Determines if the size of the file should be displayed. |
+| showPreview | boolean | false |  Determines if a thumbnail preview of the image should be displayed. |
 
 ## Available Scripts
 
