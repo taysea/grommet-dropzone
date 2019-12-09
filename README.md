@@ -13,19 +13,26 @@ The following props can be applied to Dropzone to affect its functionality:
 | showPreview | boolean | false |  Determines if a thumbnail preview of the image should be displayed. |
 
 ### How to connect Dropzone with a form
-The Dropzone has been placed within a form to demonstrate how file upload could be completed. Be sure to note the functions that have been created in `MyForm.js` to allow the file data to be tracked in the form state and submitted. If you intend to use the Dropzone for file upload, you will need to include these functions within your form. Additionally, a `fileUpload.js` file has been provided as a starter for how to connect the form data with your database. 
+This app puts the Dropzone within a form to demonstrate how to do file uploading. If you intend to use the Dropzone for file upload, you will need to include these functions within your form (see `MyForm.js` for how it is implemented). Additionally, a `fileUpload.js` file has been provided as a starter for how to connect the form data with your database. 
 ```
 const [files, setFiles] = useState([]);
 
 const addFiles = newFiles => {
     setFiles(...files, newFiles);
-  };
+};
 
-  const deleteFiles = remainingFiles => {
+const deleteFiles = remainingFiles => {
     setFiles(remainingFiles);
-  };
+};
+
+const handleSubmit = event => {
+    event.preventDefault();
+    // You will need to update ../utils/fileUpload with the correct url for
+    // where the data will be sent to.
+    fileUpload({ firstName, lastName, files });
+};
 ```
-In your Dropzone, you will need to add these props to accompany the above functions:
+To connect the above functions to the Dropzone, you will need to add these props:
 ```
 <Dropzone onAddFiles={addFiles} onDeleteFiles={deleteFiles} />
 ```
