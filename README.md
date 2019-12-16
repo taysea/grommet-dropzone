@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/98771022-57d1-4a74-9b9b-d7e690d5b2f2/deploy-status)](https://app.netlify.com/sites/grommet-dropzone/deploys) - grommet-dropzone.netlify.com
+[![Netlify Status](https://api.netlify.com/api/v1/badges/98771022-57d1-4a74-9b9b-d7e690d5b2f2/deploy-status)](https://app.netlify.com/sites/grommet-dropzone/deploys) - [grommet-dropzone.netlify.com]('https://www.grommet-dropzone.netlify.com')
 
 ## About
 
