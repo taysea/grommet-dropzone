@@ -2,7 +2,7 @@
 
 ## About
 
-This app uses Grommet and react-dropzone to create a drag and drop file uploader. To use this example in your project, you can add the Dropzone folder and MyForm.js files directly to your project. 
+This app uses Grommet and react-dropzone to create a drag and drop file uploader. You can use this repository as a starting point to build your app on top of, or you can add these files into an existing application.
 
 ### Dropzone API
 The following props can be applied to Dropzone to affect its functionality:
