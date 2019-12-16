@@ -2,7 +2,7 @@
 
 ## About
 
-This app uses Grommet and react-dropzone to create a drag and drop file uploader. You can use this repository as a starting point to build your app on top of, or you can add these files into an existing application.
+This app uses Grommet and react-dropzone to create a drag and drop file uploader. You can use this repository as a starting point to build your app on top of, or you can add these files into an existing application. If you have feedback or requests, please file them as an issue.
 
 ### Dropzone API
 The following props can be applied to Dropzone to affect its functionality:
