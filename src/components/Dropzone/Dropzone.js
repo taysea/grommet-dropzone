@@ -64,12 +64,13 @@ export const Dropzone = ({
   const currentFiles = myFiles.map((file, index) => (
     <File
       file={file}
-      index={index}
       key={index}
       removeFile={removeFile}
       showPreview={showPreview}
       showFileSize={showFileSize}
       margin={{
+        // To maintain vertical centering, the last file shouldn't
+        // have a bottom margin
         bottom: index !== myFiles.length - 1 ? "xsmall" : "none"
       }}
     />
