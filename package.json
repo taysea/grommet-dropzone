@@ -2,6 +2,9 @@
   "name": "grommet-dropzone",
   "version": "0.1.0",
   "private": true,
+  "authors": [
+    "Taylor Seamans"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "grommet": "^2.8.0",
@@ -16,8 +19,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:nowatch": "CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "pre-commit": [
+    "test:nowatch"
+  ],
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -32,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2"
   }
 }

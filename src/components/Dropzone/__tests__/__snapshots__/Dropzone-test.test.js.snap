@@ -3,7 +3,7 @@
 exports[`Dropzone accept single file by default 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 bbmEna sc-bdVaJa euPitw"
+    class="StyledBox-sc-13pk1d4-0 icmjSc"
     tabindex="0"
   >
     <input
@@ -14,20 +14,20 @@ exports[`Dropzone accept single file by default 1`] = `
       type="file"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 hFIMGw"
+      class="StyledBox-sc-13pk1d4-0 eEjmTS"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 ekjAwv"
+        class="StyledBox-sc-13pk1d4-0 eQTSO"
       >
         <span
-          class="StyledText-sc-1sadyjn-0 sahjY"
+          class="StyledText-sc-1sadyjn-0 bnqisW"
         >
           gremlin.png
         </span>
       </div>
       <button
         aria-label="remove gremlin.png"
-        class="StyledButton-sc-323bzc-0 gOcOoZ"
+        class="StyledButton-sc-323bzc-0 kQcSJk"
         type="button"
       >
         <svg
@@ -51,7 +51,7 @@ exports[`Dropzone accept single file by default 1`] = `
 exports[`Dropzone removes file when remove button is clicked 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 loiNKJ sc-bdVaJa euPitw"
+    class="StyledBox-sc-13pk1d4-0 doFbKC"
     tabindex="0"
   >
     <input
@@ -80,7 +80,7 @@ exports[`Dropzone removes file when remove button is clicked 1`] = `
 exports[`Dropzone renders basic dropzone 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 loiNKJ sc-bdVaJa euPitw"
+    class="StyledBox-sc-13pk1d4-0 doFbKC"
     tabindex="0"
   >
     <input
@@ -109,7 +109,7 @@ exports[`Dropzone renders basic dropzone 1`] = `
 exports[`Dropzone renders correct starting text for multiple files 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 loiNKJ sc-bdVaJa euPitw"
+    class="StyledBox-sc-13pk1d4-0 doFbKC"
     tabindex="0"
   >
     <input
@@ -139,7 +139,7 @@ exports[`Dropzone renders correct starting text for multiple files 1`] = `
 exports[`Dropzone renders correct starting text for single file 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 loiNKJ sc-bdVaJa euPitw"
+    class="StyledBox-sc-13pk1d4-0 doFbKC"
     tabindex="0"
   >
     <input
@@ -168,7 +168,7 @@ exports[`Dropzone renders correct starting text for single file 1`] = `
 exports[`Dropzone renders file preview 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 bbmEna sc-bdVaJa euPitw"
+    class="StyledBox-sc-13pk1d4-0 icmjSc"
     tabindex="0"
   >
     <input
@@ -179,27 +179,30 @@ exports[`Dropzone renders file preview 1`] = `
       type="file"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 hFIMGw"
+      class="StyledBox-sc-13pk1d4-0 eEjmTS"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 ekjAwv"
+        class="StyledBox-sc-13pk1d4-0 eQTSO"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 hcwkPp"
+          class="StyledBox-sc-13pk1d4-0 bCvkuC"
         >
           <img
-            class="StyledImage-ey4zx9-0 fIJtXv"
+            class="StyledImage-ey4zx9-0 UumnI"
           />
         </div>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gufrXq"
+        />
         <span
-          class="StyledText-sc-1sadyjn-0 sahjY"
+          class="StyledText-sc-1sadyjn-0 bnqisW"
         >
           gremlin.png
         </span>
       </div>
       <button
         aria-label="remove gremlin.png"
-        class="StyledButton-sc-323bzc-0 gOcOoZ"
+        class="StyledButton-sc-323bzc-0 kQcSJk"
         type="button"
       >
         <svg
@@ -223,7 +226,7 @@ exports[`Dropzone renders file preview 1`] = `
 exports[`Dropzone renders file size and calculates correct suffix 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 bbmEna sc-bdVaJa euPitw"
+    class="StyledBox-sc-13pk1d4-0 icmjSc"
     tabindex="0"
   >
     <input
@@ -234,18 +237,21 @@ exports[`Dropzone renders file size and calculates correct suffix 1`] = `
       type="file"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 hFIMGw"
+      class="StyledBox-sc-13pk1d4-0 eEjmTS"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 ekjAwv"
+        class="StyledBox-sc-13pk1d4-0 eQTSO"
       >
         <span
-          class="StyledText-sc-1sadyjn-0 sahjY"
+          class="StyledText-sc-1sadyjn-0 bnqisW"
         >
           gremlin.png
         </span>
+        <div
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 gufrXq"
+        />
         <span
-          class="StyledText-sc-1sadyjn-0 fUmIvE"
+          class="StyledText-sc-1sadyjn-0 fWSbXS"
         >
           10.0
            
@@ -254,7 +260,7 @@ exports[`Dropzone renders file size and calculates correct suffix 1`] = `
       </div>
       <button
         aria-label="remove gremlin.png"
-        class="StyledButton-sc-323bzc-0 gOcOoZ"
+        class="StyledButton-sc-323bzc-0 kQcSJk"
         type="button"
       >
         <svg
@@ -278,7 +284,7 @@ exports[`Dropzone renders file size and calculates correct suffix 1`] = `
 exports[`Dropzone renders remove button 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 bbmEna sc-bdVaJa euPitw"
+    class="StyledBox-sc-13pk1d4-0 icmjSc"
     tabindex="0"
   >
     <input
@@ -289,20 +295,20 @@ exports[`Dropzone renders remove button 1`] = `
       type="file"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 hFIMGw"
+      class="StyledBox-sc-13pk1d4-0 eEjmTS"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 ekjAwv"
+        class="StyledBox-sc-13pk1d4-0 eQTSO"
       >
         <span
-          class="StyledText-sc-1sadyjn-0 sahjY"
+          class="StyledText-sc-1sadyjn-0 bnqisW"
         >
           gremlin.png
         </span>
       </div>
       <button
         aria-label="remove gremlin.png"
-        class="StyledButton-sc-323bzc-0 gOcOoZ"
+        class="StyledButton-sc-323bzc-0 kQcSJk"
         type="button"
       >
         <svg
@@ -326,7 +332,7 @@ exports[`Dropzone renders remove button 1`] = `
 exports[`Dropzone truncates text for long file name 1`] = `
 <div>
   <div
-    class="StyledBox-sc-13pk1d4-0 bbmEna sc-bdVaJa euPitw"
+    class="StyledBox-sc-13pk1d4-0 icmjSc"
     tabindex="0"
   >
     <input
@@ -337,20 +343,20 @@ exports[`Dropzone truncates text for long file name 1`] = `
       type="file"
     />
     <div
-      class="StyledBox-sc-13pk1d4-0 hFIMGw"
+      class="StyledBox-sc-13pk1d4-0 eEjmTS"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 ekjAwv"
+        class="StyledBox-sc-13pk1d4-0 eQTSO"
       >
         <span
-          class="StyledText-sc-1sadyjn-0 sahjY"
+          class="StyledText-sc-1sadyjn-0 bnqisW"
         >
           very-long-image...
         </span>
       </div>
       <button
         aria-label="remove very-long-image-title-that-should-be-truncated.png"
-        class="StyledButton-sc-323bzc-0 gOcOoZ"
+        class="StyledButton-sc-323bzc-0 kQcSJk"
         type="button"
       >
         <svg

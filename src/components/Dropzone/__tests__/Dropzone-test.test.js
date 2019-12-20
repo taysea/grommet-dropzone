@@ -12,13 +12,17 @@ import { calculateFileSize, truncateText } from "../../../utils";
 describe("Dropzone", () => {
   let smallImage;
   let largeImage;
+  window.URL.createObjectURL = jest.fn();
 
   beforeEach(() => {
     smallImage = createFile("gremlin.png", 100, "image/png");
     largeImage = createFile("gremlin.png", 10000, "image/png");
   });
 
-  afterEach(cleanup);
+  afterEach(() => {
+    cleanup();
+    window.URL.createObjectURL.mockReset();
+  });
 
   test("renders basic dropzone", () => {
     const { container } = render(<Dropzone />);

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Box, Button } from "grommet";
 import { FormClose } from "grommet-icons";
-import { FileInfo } from "./FileInfo";
+import { FileInfo } from ".";
 
 export const File = ({
   file,
