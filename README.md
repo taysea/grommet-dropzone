@@ -1,6 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/98771022-57d1-4a74-9b9b-d7e690d5b2f2/deploy-status)](https://app.netlify.com/sites/grommet-dropzone/deploys) - [grommet-dropzone.netlify.com](https://www.grommet-dropzone.netlify.com)
+
 ## About
 
-This app uses Grommet and react-dropzone to create a drag and drop file uploader. To use this example in your project, you can add the Dropzone folder and MyForm.js files directly to your project. 
+This app uses Grommet and react-dropzone to create a drag and drop file uploader. You can use this repository as a starting point to build your app on top of, or you can add these files into an existing application. If you have feedback or requests, please file them as an issue.
 
 ### Dropzone API
 The following props can be applied to Dropzone to affect its functionality:
