@@ -36,13 +36,15 @@ export const MyForm = () => {
         <Heading>Dropzone Form</Heading>
         <FormField
           label="First Name"
+          name="fname"
           required
           validate={{ regexp: /^[a-z]/i }}
-          onChange={event => setFirstName(event.value)}
+          onChange={event => setFirstName(event.target.value)}
           value={firstName}
         />
         <FormField
           label="Last Name"
+          name="lname"
           required
           validate={{ regexp: /^[a-z]/i }}
           onChange={event => setLastName(event.target.value)}

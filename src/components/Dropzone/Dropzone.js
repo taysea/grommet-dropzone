@@ -7,6 +7,8 @@ import { File } from "./File";
 
 export const Dropzone = ({
   accept,
+  maxSize,
+  minSize,
   multiple,
   onAddFiles,
   onDeleteFiles,
@@ -43,6 +45,8 @@ export const Dropzone = ({
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     accept, // Accept specific file types
+    maxSize, // Max file size in bytes
+    minSize, // Min file size in bytes
     multiple, // Accept multiple files
     noClick: myFiles.length, // If files are in dropzone, disable click
     onDrop // onDrop handler
@@ -100,6 +104,8 @@ export const Dropzone = ({
 
 Dropzone.propTypes = {
   accept: PropTypes.string,
+  maxSize: PropTypes.number,
+  minSize: PropTypes.number,
   multiple: PropTypes.bool,
   onAddFiles: PropTypes.func,
   onDeleteFiles: PropTypes.func,
@@ -109,6 +115,8 @@ Dropzone.propTypes = {
 
 Dropzone.defaultProps = {
   accept: "",
+  maxSize: undefined,
+  minSize: undefined,
   multiple: false,
   onAddFiles: undefined,
   onDeleteFiles: undefined,
