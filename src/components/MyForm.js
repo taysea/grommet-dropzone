@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-import { Box, Button, Form, FormField, Heading, ThemeContext } from "grommet";
+import {
+  Anchor,
+  Box,
+  Button,
+  Form,
+  FormField,
+  Heading,
+  ThemeContext
+} from "grommet";
+import { Github } from "grommet-icons";
 import { Dropzone } from "./Dropzone";
 import { fileUpload } from "../utils";
 
@@ -30,6 +39,7 @@ export const MyForm = () => {
   return (
     <Box
       width="medium"
+      gap="medium"
       onDrop={event => event.preventDefault()} // Prevent document drop from overtaking window
     >
       <Form onSubmit={handleSubmit}>
@@ -85,6 +95,12 @@ export const MyForm = () => {
           <Button type="submit" label="Submit" primary />
         </Box>
       </Form>
+      <Anchor
+        alignSelf="center"
+        icon={<Github size="large" color="dark-5" />}
+        href="https://github.com/taysea/grommet-dropzone"
+        target="_blank"
+      />
     </Box>
   );
 };
